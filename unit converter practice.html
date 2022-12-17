@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-16" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CONVERTER</title>
+</head>
+
+  
+      
+  <body>  
+<h1><b>UNIT CONVERTER</b></h1> 
+<div id="converter">
+  <!-- for taking input -->
+    <input type="number" id="input-value">
+
+    <select id="input-unit">
+      <option value="Millimeter">Millimeter</option>
+      <option value="Centimeter">Centimeter</option>
+      <option value="Inch">Inch</option>
+      <option value="Feet">Feet</option>
+      <option value="Meter">Meter</option>
+    </select>
+    <span><b> =</b></span>
+    <!-- to generate output -->
+    <input type="number" id="output-value">
+    <select id="output-unit">
+        <option value="Millimeter">Millimeter</option>
+        <option value="Centimeter">Centimeter</option>
+        <option value="Inch">Inch</option>
+        <option value="Feet">Feet</option>
+        <option value="Meter">Meter</option>
+    </select>
+  </br></br>
+    <!-- button tag used for swapping and conversion -->
+    <id="button">
+    <button id="convert-button">Convert</button>
+    <button id="swap-button">Swap</button>
+  </div>
+
+  </body>
+  </html>
+
+
+<!-- CSS to style the UI -->
+  <style>
+    body{
+      text-align: center;
+      margin-top: 200px;
+      width: 500px;
+
+    }
+    h1{align-items: center;
+      text-align: center;
+      background-color:#3D5B59;
+      color: white;
+      border-radius: 20px;
+      margin-left: 360px;
+      width: 500px;
+      padding: 20px;
+    
+    }
+    #converter{
+      
+      width: 500px  ;
+      margin-left: 360px;
+      text-align: center;
+      background-color:#B5E5CF;
+      padding: 20px;
+      border-radius: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    button{
+      border-radius: 10px;
+      border: none;
+      height: 20px;
+      background-color: #B99095;
+    }
+    #convert-button{
+      margin-right: 50px;
+    }
+
+    #convert-button:hover, #swap-button:hover{
+      background-color: green;
+      color: white;
+    }
+    #input-value, #output-value, #output-unit, #input-unit{
+      border-radius: 20px;
+      width: 88px;
+      height: 20px;
+      border: none;
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- JS function for the web contents -->
+  <script>
+ function convert() {
+  // Get the input and output elements
+  const inputValue = document.getElementById("input-value");
+  const inputUnit = document.getElementById("input-unit");
+  const outputValue = document.getElementById("output-value");
+  const outputUnit = document.getElementById("output-unit");
+
+  // to get the selected input and output units
+  const inputUnitValue = inputUnit.value;
+  const outputUnitValue = outputUnit.value;
+
+  // Converting the value
+  if (inputUnitValue === "Millimeter" && outputUnitValue === "Centimeter") {
+    outputValue.value = inputValue.value/10;
+  } else if (inputUnitValue === "Millimeter" && outputUnitValue === "Inch") {
+    outputValue.value = inputValue.value*0.3937;
+  } else if (inputUnitValue === "Millimeter" && outputUnitValue === "Feet") {
+    outputValue.value = inputValue.value*0.0032;
+  } else if (inputUnitValue === "Millimeter" && outputUnitValue === "Meter") {
+    outputValue.value = inputValue.value / 100;
+  } else if (inputUnitValue === "Millimeter" && outputUnitValue === "Millimeter") {
+    outputValue.value = inputValue.value;
+  } else if (inputUnitValue === "Centimeter" && outputUnitValue === "Inch") {
+    outputValue.value = inputValue.value/2.54;
+  } else if (inputUnitValue === "Centimeter" && outputUnitValue === "Feet") {
+    outputValue.value = inputValue.value/30.48;
+  } else if (inputUnitValue === "Centimeter" && outputUnitValue === "Meter") {
+    outputValue.value = inputValue.value/100;
+  } else if (inputUnitValue === "Centimeter" && outputUnitValue === "Centimeter") {
+    outputValue.value = inputValue.value;
+  } else if (inputUnitValue === "Centimeter" && outputUnitValue === "Millimeter") {
+    outputValue.value = inputValue.value*10;
+  } else if (inputUnitValue === "Inch" && outputUnitValue === "Inch") {
+    outputValue.value = inputValue.value;
+  } else if (inputUnitValue === "Inch" && outputUnitValue === "Feet") {
+    outputValue.value = inputValue.value/12;
+  } else if (inputUnitValue === "Inch" && outputUnitValue === "Meter") {
+    outputValue.value = inputValue.value/25.4;
+  } else if (inputUnitValue === "Inch" && outputUnitValue === "Centimeter") {
+    outputValue.value = inputValue.value*2.54;
+  } else if (inputUnitValue === "Inch" && outputUnitValue === "Millimeter") {
+    outputValue.value = inputValue.value*25.4;
+  } else if (inputUnitValue === "Feet" && outputUnitValue === "Inch") {
+    outputValue.value = inputValue.value*12;
+  } else if (inputUnitValue === "Feet" && outputUnitValue === "Feet") {
+    outputValue.value = inputValue.value;
+  } else if (inputUnitValue === "Feet" && outputUnitValue === "Meter") {
+    outputValue.value = inputValue.value/3.28;
+  } else if (inputUnitValue === "Feet" && outputUnitValue === "Centimeter") {
+    outputValue.value = inputValue.value*30.48;
+  } else if (inputUnitValue === "Feet" && outputUnitValue === "Millimeter") {
+    outputValue.value = inputValue.value*304.8;
+  } else if (inputUnitValue === "Meter" && outputUnitValue === "Inch") {
+    outputValue.value = inputValue.value*25.4;
+  } else if (inputUnitValue === "Meter" && outputUnitValue === "Feet") {
+    outputValue.value = inputValue.value*3.28;
+  } else if (inputUnitValue === "Meter" && outputUnitValue === "Meter") {
+    outputValue.value = inputValue.value;
+  } else if (inputUnitValue === "Meter" && outputUnitValue === "Centimeter") {
+    outputValue.value = inputValue.value*100;
+  } else if (inputUnitValue === "Meter" && outputUnitValue === "Millimeter") {
+    outputValue.value = inputValue.value*1000;
+  }
+}
+function swap() {
+  // Get the input and output elements
+  const inputValue = document.getElementById("input-value");
+  const inputUnit = document.getElementById("input-unit");
+  const outputValue = document.getElementById("output-value");
+  const outputUnit = document.getElementById("output-unit");
+
+  // Swap the units and values
+  [inputUnit.value, outputUnit.value] = [outputUnit.value, inputUnit.value];
+  [inputValue.value, outputValue.value] = [outputValue.value, inputValue.value];
+}
+
+// Add event listeners to the convert and swap buttons
+document.getElementById("convert-button").addEventListener("click", convert);
+document.getElementById("swap-button").addEventListener("click", swap);
+
+</script>
