@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Photo Site</title>
+</head>
+
+<body>
+    <main>
+        
+        <div id="landing">
+            <div id="landing-text">
+                <div id="landing-text-inner">
+                    <h1>Wildlife</h1>
+                    <h2>Beautiful Natural Photography</h2>
+                    <a href="#images" class="btn" id="view-work">
+                        View Work
+                    </a>
+                    <a href="#footer" class="btn" id="about">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+            <div id="landing-image"></div>
+        </div>
+
+        <div id="images">
+            <div id="header">
+                <h2>Our Work</h2>
+            </div>
+
+            <img  class="image" src="https://images.pexels.com/photos/927497/pexels-photo-927497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+            <div class="caption">
+                <h3>Photo One</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, tenetur.</p>
+            </div>
+            <img class="image" src="https://images.pexels.com/photos/7018141/pexels-photo-7018141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+            <div class="caption">
+                <h3>Photo Two</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, tenetur.</p>
+            </div>
+            <img class="image" src="https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+            <div class="caption">
+                <h3>Photo Three</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, tenetur.</p>
+            </div>
+            <img class="image" src="https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+            <div class="caption">
+                <h3>Photo Four</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, tenetur.</p>
+            </div>
+            <img class="image" src="https://images.pexels.com/photos/631292/pexels-photo-631292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+            <div class="caption">
+                <h3>Photo Five</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, tenetur.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Contact Us</h3>
+        <p>Email or call us to set up a consult</p>
+        <p>Email:
+            <strong>contact@wildlifephoto.in</strong>
+        </p>
+        <p>Phone:
+            <strong>+91-1234567890</strong>
+        </p>
+    </footer>
+    </body>
+    <style>
+
+        body{
+            background-color: antiquewhite;
+           
+        }
+        #landing{
+            margin: auto;
+            width: 90%;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #landing-text{
+            display: flex;
+             flex: 0 1 40vw;
+             height: 50vh;
+             justify-content: center;
+             align-items: center;
+            text-align: center;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            background-image: url(https://img.freepik.com/free-photo/background-gradient-lights_23-2149304997.jpg?w=2000);
+            
+        }
+
+        #landing-image {
+        background: url(https://images.unsplash.com/photo-1596265371388-43edbaadab94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d2lsZGxpZmUlMjBjYW1lcmFzfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=600&q=60);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50vh;
+        flex: 0 1 60vw;
+        margin: 0;
+        }
+
+        .btn {
+         padding: 0.5rem 2rem;
+         border: 1px rgb(204, 204, 204) solid;
+        display: inline-block;
+        margin: 2rem 0 0;
+        border-radius: 50px;
+        text-decoration: none;
+        color: #333;
+        transition: background 500ms ease;
+        }
+        .btn:hover{
+            background-color: rgb(115, 230, 222);
+        }
+        .image{
+            width: 80%;
+            height: 80%;
+        }
+        #images{
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        footer{
+            background-color: rgb(218, 223, 63);
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        
+@media (min-width: 500px) {
+  #landing {
+    display: flex;
+    height: 100%;
+  }
+
+  #landing-text {
+    height: 100vh;
+  }
+
+  #landing-image {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 700px) {
+  .btn {
+    padding: 1rem 3rem;
+  }
+}
+
+    </style>
