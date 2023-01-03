@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAApVBMVEX7D0f////yHEn7AEL7AD/7AEH7ADr7ADjxADv7AD37ADvxADb/5en9u8T/9vjyEET7s73yAD/2Ynn3UW392Nz7ADT7zdP/+vv/8/X7ADH/4OT/7/H+qbX/6ez9Xnj8O1/8JVH8MFj8Rmb/zNP+iJn+sLv+j5/+lqX+oa79cof/xc39gZT8SGj9eI38G0z+prL2Vm/0OVr7ACH2aX70MVX3cob5mKW7RG8DAAAU/ElEQVR4nO1dB3ezuNI2EbYM7jEY3HHvzr43Wf//n3YRRQWGLpL3fl+ePWfPrgll0Gj0TNHQaPziF7/4xS9+8Ytf/OL/IFC1s6ud/h1Qt1XORqs1Dv5L/0tlVR+KoZY/XXspZ0xEw85hoUl7KpnQjopyKS+ielMUY4Nbz4Wi7Cu8qVphKz1c+uTmu+LCmJB/j/9SNdUN5VpeQjRWQthNiU8lEWijKAu9wulWKGEFTagVeldRtuXVS11TCY9SDY3qPZMEtWgtKg2huplRLe1Nqz8OxeY6xkhtPtbVL2Urk/IC6ve+wnAsrKYtM8n8Ils5rS8zZV3VeqGtojxKa5f+rgjYFxRRH84eCSKaS++K3VbZZwtBJLyVlbD5UCK4FLqUSs5PGKPpzrvgorKEDXWuGKXH0BnfhobNSdgvpFS6awOUDXxo5av/wiz7bOxSL1dNS3MRpOJW4+w9y/V4Ga83zyJnT4mVAo0AptpxqT6IZiVT0yBSkvXiOtXUYm4GMokYBjR11T2n+JWpoLtc2BWvcFAUyylm8xBG9wMR4BMUQF0/zkT757ProbKE+lnpF9KtGNBdUV7FrKi+Hvq28pqgPkidupR+Z5q4kn55mC6VWcXXhA2rmIBmqIWTlJFHVvXFkAATryfDmGoZN1JvxWxV6+jLZ53SLGVruJBBdInzk+4AI+ycN1nvspiJ8dyR+eLxTNfADbyQFASeKP2053fl+7CUg1SvAV8JiUX4m/zlpXJIVhWEN57Bq+J8xOG4i/ms9V3e8nOufCStqai1HQYWwahOLdhliZIeq5vInGgZyhx+m8gcX9m6W56dx6Be3Ou9f1s8QHPt9goQsTkdT3hKPZd4S2JJvzGko5+H8Zup+sqIeA0f0oyNSbwGWRfLAz0+I9THTIkBXH3V4kOhrt2LzSTO6xJA3bh8LoOKxyg0fX8vKCIyN4SuyQ3pFIVnCQCsIuuXNt13FaNQbEaf3g/EEbF/NnSMe7CES0Gd9efeLmhkVWcRxOXGPxtZRXNYQuXEFk7snOyiRlYL3HZlvvrZ/EZzlSAgpXcINz5YiC2vkSU+liffq/HD6Q0SQE2AF9R2mepB+DWni6MS+2Utxuq3sZkkNEFLGswfhPA2Ok13uSw/yVEpsyf++eQNCS8mYvYfnsmFeIe0DkWMCSbr/P1vSL/ppxQJlSjT8bCMD6JL+iIBmObsx9f5ABgUIh2niHeitlzS14/oo7vQV0jiScSzuICKJfjQmnbx3pIYg9BdR+z2NyipZxAKg8scavgWktqI2/z5w8tgABOwJDkQOkO6vl/SH3eiUjZ/3owSoFIC+jYE6c8jn2xLiPb+LJJYdyZumsvkXrb44/yvsCwiklh3JmztubBiv55AEX90ZBNZdyYAn9lFPFCJWo7EmE9hoETWXRLR8gyE1z3Jscli0D8kS6isePKGzLtnqnc/R75VWNcqYMYG0WVyu+BXkMl+B9BatoCKsg/GS9W48N28emI3UYbUo1oq6y4Hy5dPvwh8N8pk5Qm4ctIOmyVYdyYOuKG1ouHJoinj3DB3qbUNJQlNBrbTW3wN6oHPUTlAhdaWskrWj3KsOxNdG/o1GptskPDdperImu5aZL0njmJJ1l0Os+iyj5+nedXCC9Mfow8tIViC+hlPJRVCJRbCaEHuvqxCdxAtD7CGULapPOsuB4sNF8KbMMD3Km9k0Z3pYBeUEA/hR6kLYeoc4S135/JGFj3oUnDWYJu1hJ6jRnhZHZfJCf7MtXy0Sm1t/UXpAV+DK9j+Jkywy+Tuu8ivgJHNDTQl2pBUmCCfdWfiYsYSsUrF8iV8jcTFeAmls+5MLEEOlVW/lAr0tJL0nJTs/x2wKi37+jmpREA7/rRkFCkFPjmQWAJaC+suiZpiAD8tFodJHTE6NVaU/pMoVhCfD/g7WXcmJNYnMYAuzo/hLD1W1RS3hsyM/OjGA8E+hp/vjyhh4WEtPt//nSQclB6qwnxq/vpnVACDt/ELIgur9mAw6vybKKD9Rf6gDYeGbOm5VMSx7l5n8FYIriD3WDbg2PaOdV5JEm79u5jgMA85J+pZrc4+EPDOLm59FRTQE7IzFtfTOT2SoMSTdnD8H+goF0hWjzJqUfUzd+tOcQG9gRRGywgEeGsnTMXjKDwTeAU2N2ym0ZcQmDO5idRrJ8iQhTY/56iEo33s+T2MqaYAEnIJfxKlBvfVFAOfvC8t4Vv7k12FaekfUMBueBdQS7nNDV7lxBVVtK0C6y4v4VubG6/3cIxGoFe2CJV0BJRgcR6e6c+f2dispKkmvypVkPCtw0zqgYoAetb0BXSAEixWNz+l7/46rrKACBUmTMJRO4o34NCIN70DSo2WqWrYD83Z4As4GtbXqiq/CHXLbzARWTeVcNSbRHClAp7ob739H27QObvyh6opkFe+0ptAK37gPaELTyWHFTqUiLFuKmEnFnuzQkHafODR6nEr6ICedArVtA3UBvxLlRSgbbSK7L6nKmwnh+pz4Cm8ZCZhbIb0QQnd3/+hixtbFQ2qiABzo6/kC1gr6OZ5pOkXPw5vb6r4U5GS2RIScqvbgJU20nFtx2SY0EkKuaV8dbz29ExxtXKqllgQW0rCOZ2L7KxbsiamarAtkDREKPMkX718UohGFSUpJaGyH8UOpViTO9VSIM7eE1MXzW3ePURoNQ5zTsKOyWjyvpyE3U5MnDnV3CitmYWvA1xJohk2vLDzUW/1ogwdzavTPl25i/Csu7yEylf40Iy6JdKaVELTd6JDs85ZtYnc92U/pqZz6AudCqaR25eUMBRnwNIfiyRaQ0VvA4xuF6PZ0YLqRAm3xDAbO/JvYdtu5A7yJGTKKMZI+mytiAtYJajv0BSvxW0giMW65UnIaM0bvOJChMaqsH9bo7dZcooQiyJIlJB6uW2BNaUsI5Wq3ZFJJeQ3LjtRUiFRQhouGAhVHnRkB3EBK8QREWKDNWHvKZ68lyihwjg592MqnSufs1Adfm1lRZHxklmZEj6oPnJxqmMaoZmX7cSk3cWYNiuNirk2MiUEbQq1PwPArRqWrMVA79ErBfXJQMmsTAltyrAZrUlaQ3ysyhZ+IedymAg25eJdCtioJlNCbm2nF2M84By7SGyjTRGoLTOoibruH6ttEJDU41ESqRJ+UHEO0T8EQ1TXilWZmFzTMFkzIKhkVqqEcZVMDzOW7+fkg7QXEOpVoJJZqRKG2Yk3SmuYTwWEihMLRXLjaStX3hxDyXu5EsZoDV1A2gChqd5+Ax/EujEnfhPJEu7okPlGwPqi1wDuXX2bPhqf+amsQTkFuRIqzA32TDkjcp+xS0gpwhBdLTB3J1nCT0prPNN5ikc7GIDNqBXhQCWzkiVktMaLM77RSwCFAx+ys/dwyaxkCW2qliQLS8M5YISmaJONTMAb1SRLyEKpHTuL0MjfCA1uVJMt4Qc/86i4UIRGepfehJJZ2RLOKPt+V5bhBQbQrn/pW051uD2EbAktSmsG7NoDYJ2KhRErw4TrumVLyIXDDRqhgeoXpNfrJZXMSpeQpWEu2/ACUHlC6Va4SUjaqCZdQvstBsj5rRJGhDFNKJmVLiHzCN9SzpffNANBrLseCYex2ocOQGhe0glN0kY1+RLOo1VWwN/UUPoMV8zVIiHnBvuACM1cOqF5JpXM1iDheSRK2AEITdkwYiJUyD2rS8KZqKaBqyhCeiPFVuJGtRokpOnTQEmhCA3M2FS99CLZTNyoVoeEe0FNIUIDhRERVm8fZQMbfMnsN0h4FdcLwKeJhxFJ/1uizSVtbMpGtTokFGgNSGiiYUSEw65ip3KDOE1uylaHhAKtGQEmIFoj21qHOdV8IdR4C5VNooD1SHjg1LQNmABxtiHzGFpbI9eGS238jIx02ka1WiTscrV9kPMrTDbVCSizNdzgPLkoba9YD1EL0jaq1SIhR2sgQtPlCQ0Oe2Qu8vYg9NiL+AmYTdI+l9okfNH1AiI0fBgRB4R5t87tEWve8rPnXlNqe4h6JKTJe7CGhgsj4oAOPIr0kPSaMioX9p5SN6rVI2Fqyslm2aIghtt1ivlSphcYHVOrlMi665OQ1dAAb5cLI/ov/1r4o4pNMopL+n+p/a7qkZAxU+DtfjKD6SWLhsWdYdQgTzsMXlUy6yag2aFO/BiVMD4QIfUEi2QUI608wRIe9TW5lXEV/XT2P/67aqU2ZQt3do2AAuWb/6ADYCB2wYvpgJ41Szkd4gfFakSt5FchWsR8+stOVr+rq7c7bwCV79pv3iFoLik3T8QObKZZHTiwVkhq+ukt8l5IMloyG8Pkq9OZvoMDPX/vdDpfcADk1e502vB2wyVVUqA8QVYY0fOXukTCFNZNn8hIbMZjGcktUIwkqrQQk4iRs2TFur1c2grV0pQtCywRDJQnnGSFEb1U0xj9RHsIi204AY7Ky4tqjyuZ02bS9un6QAkNtJTIDCOqxA6jzbf2u/LAUk5A1vkgPYz4A+0hqOcElSdIDyNWbA8xn81mRftJ0T3BA4AuFvyeWR6Ubg/R7+3Xqqa7/6ib27CArr/StpNK72Jeusvs7mJiupsIqdhc5VYGussJKk+o/nnDCEo28LyOY2yx6TXMzQEao4EiNJYjWUBiS/dp7ThA9D9BhxvhcZ4pScsTRwBnraPZDtJM/bNXZMm4qkma1MzRp4+F2aBofqXGXilQcet9kU1PfaS2PJ1mMaQ+2xoElSfU2Ba62dLupzzdr+Cu4xQ4venpkgsjAhGabr1d25GuO5mT8iOLVOGExhcE/deAjWB8b7iUXkJZvV00s3Xppfj8YgM79jycck3B2qru4nUcd7isGtgCpDqhaV6yv+Xp0tXVIqGl4Jy3MWh7cHzDgPCWlxs4+dVuj4RuC2BOTUIrIdcp3OZYUlELrcFJKbQWRxul/zAR+TLibsm9/GY8GXmINbmBSLeEakTi7ebcrI80/LztItYuQqlIr+jeukFaJgnRIxzT01FMQNDmVv/OoxecsVd5O5+oJroMeWWK2PIpewFiOixaTm1Eh7ANWtxqPSAbZLYEmnEd515XVYxWH+G8ivbJ5FoRiSYiOojRTkwdeNXc5XAN014CTcORZ+V+zvqKK8La+uidGt1IxlqELCOnbMRHt6e8fANwDio5woiq6YyfZpIqN7k69aPJ/Twcp6d1dGeja2bjtotuDkCsgGMW2QgZLQP8ZBNxNPpMoIiZCWz9QabMbJW0aKrrsz9v5nfOLDz7nqeQdG2kq0dLWWhBzEO43oZbFSLfF4u6LPM/noiDUeftltjb1shQUlpOkVh5irD3TNaW/wM/m7i7w33tzfvJ+8QdEKTVhW2o842gO7Gvtc33X+23r/fjNcXhzggjcgmk5MFGqqs9Z8Hkh+HSHvBRbPxP8L7tOBVSIykVW2yi9iwR38oII7aYi52y1QS5dlz4f+Qqd3DaPmpycGjxluN4/c56GZGh6wgvoHif5aw9QKx/AL/5PP4iTvznCdW9S1LMMP0z2QivRvNF7/cuUHc0ZDqrfY+amnl3duL/ChePwi4ypqHKFDx1196T1wVsWO4CQ5/GEpqXe5lh6/ZMzG65vrPfcOmw3jyRWFNXIoSXxbp1Zp/T2R13HTIHZ5qrqlSlhjo97EX77U367MfEvBk4noRO+bZnAqysnfdcPUXuwL+XQr7q7gJNtc3YhCPWIkb2keGveXYKKlNqAZnPdGSzbjXUtfxhcd07xfWnmg6dxfNx+DEfd2DtzLuaOzjCWVzC7DAiavhRoHPugGPIrVyGw4morPwn1mZ5wrPNd3hxwoUDeE6OJ26tb8dHgcITSjyOZBSZeX94SqDeLCuHy63vwRvqRRue5wsjIlUrEjFmroErImow+37z7qY5zzzuWsIdiyYzagkjTtn1j1PX9rNY56Oqr108sVxLGJHP/pIQGhclS6TvOYuT0D1v9DXArJ4wosn5ab2mu/TfqW7FeRqJa+jPzdrnn2rCl1voH0+d264AN5XfkrzhLf1Nzh4YjurOqVBmO2IhEW7d973Zsm/ZRJ+0/esdpZfyuIzHSQ1MCpCeF20QO+8TcQqbuI2tSxB7EbaO6dPxkLLCg+7rd//6aWa8eRU3xos8Nkd+R3IX2nJoNlTBjzu63oWmBcM4pDdtOSd+KN6bdNd3/wX4XCKQbm5OmY7GsI6UkyvbHvvVXxQ7spqawYcXaVSGUkx71nvtCUdjhqR/amYuKUibbvbpk7J0K6EU6KQaaaVFwmKWF+FteZ/sCWqTwlKG7mHlYKz7eV/UGIcR41melsUZk9KKaoLmVF8evX3NxJ5EPLnJpkUSUe44Bo60X6U7vGstMU6h6+tgAT3nUzEVo/EBnpTR3oiuS1A5/B0EUmYovuXpRRIuyEThe9UWxrEJhaoQRj6/NvIyKaRP1ycjnjaM7gFy53mmM5WFMG51ncb5x3yvCTqim4kqY269ObvIv5oRy7PfifGoWBjRnFTva0I335/Mhhar013uc4+KF8wplm9wqYPz3uOENMQXpE5v1UujuA4RF72BowUZRoHqudb99FmckDRb+p2ulOJmLf3iLi5W1Y9YcHvVrHtToG/uCF6mRRgGyiBwiefp5taflML71In9sqt8T84D5ugayTlobE22jujbvpONdLy+7Wa8Cmiuhs5PTuW6IeFLOcaUo2/Dgns3qgJp4oSbzpX5U0Z54pTXy4NL3/yJaayrfVVBAlwHXNI75lelve7Rt+7lx+Uj32WQUdq2aXr6zuC6g+bH6fsmYAqkSKgPyaDxbI0UzKl/g3ykyqF6Nr8x7fcdRD7ozE3FIrov44NLMFSXJVdvlujVlLrEllvnl5cCAqJtr6YvoSNMnBoJDbC8AkJ3STVDJ6/YCqifoSiOBCCv0GAmwdh5aSobh/7FsFHMOmPLXbFq8FgbT8LiUisfcyJY7d1FkGSOJnB+OxkmUe7lRr6iEiZ5eMoIZ4RVruNm47krtL2WwPTfT3+vy+Y+qJv3yxyZCCi9QaKCBScUwnSjm7WQ8zQUjiVpyxMrafgsPJnQmnl1VwnfdxOxLNvzIoKwpGF3L3E55xY6JSfpEc7m51nOQtu0/RWw6AT0oel+PX7O6FMhNCXNbO9DOceiE5A7X+vGq7z+KqD7tegKGLnAxqolgisPCFdcy/R9zo/1/O8C3f7qIZSBWmjpL37xi1/84he/+MX/b/wXRS+XK2muTloAAAAASUVORK5CYII=" type="image/icon type">
+    <title>Movie Booking</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body><div>
+    <nav>
+        <ul class="logo">
+        <img id="logo" src="data:image/png;base64,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" alt="logo"/></ul>
+        <ul><a href="#" class="tab" > Home</a></ul>
+        <ul><a href="#movies" class="tab" > Movies</a></ul>
+        
+    </nav>
+</div>
+    <div class="slideshow" id="home">
+
+<div class="mySlides">
+    <div class="numbertext"></div>
+    <img src="https://www.joblo.com/wp-content/uploads/2022/12/glass-onion-netflix-1.jpg" style="width:100%" height="300px"/>
+    <!-- <div class="text">Caption Text</div> -->
+  </div>
+  <div class="mySlides">
+    <div class="numbertext"></div>
+    <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1672285551727_qed.jpg" style="width:100%" height="300px"/>
+    <!-- <div class="text">Caption Two</div> -->
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext"></div>
+    <img src="https://d18hry5vavz86j.cloudfront.net/WebpTest/46db9daa-89bb-4a81-9b0c-8fd867f1bfbd.webp" style="width:100%" height="300px"/>
+    <!-- <div class="text">Caption Two</div> -->
+  </div>
+
+<section>
+    <div class="movies" id="movies">
+        <b> MOVIES</b>
+    </div>
+
+</section>
+    <section class="small-posters">
+        <ul class="spc"><a href="#bkbk"><img id="sp"  onclick="book()" src="https://www.joblo.com/wp-content/uploads/2016/03/indiana-jones-and-the-dial-of-destiny.jpg" alt="Indiana Jones"/></br> Indiana Jones</ul>
+        <ul class="spc"><a href="#bkbk"><img id="sp1" onclick="book()"  src="https://www.joblo.com/wp-content/uploads/2021/06/transformers-rise-of-the-beasts.jpg" alt="transformer"/> </br>Transformer</ul>
+        <ul class="spc"><a href="#bkbk"><img id="sp2" onclick="book()"  src="https://static.toiimg.com/thumb/msid-96434337,width-219,height-317,imgsize-62693/96434337.jpg" alt="circus"/> </br>Circus</ul>
+        <ul class="spc"><a href="#bkbk"><img id="sp3" onclick="book()"  src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Sita_Ramam.jpg/220px-Sita_Ramam.jpg" alt="Sitharamam"/></br>Sitaramam</ul>
+        <ul class="spc"><a href="#bkbk"><img id="sp4"  onclick="book()" src="https://www.joblo.com/wp-content/uploads/2022/07/super-mario-bros-movie.jpg" alt="spiderman"/> </br>Super Mario</ul>
+        
+        <ul class="spc"><a href="#bkbk"><img id="sp5" onclick="book()" src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/hit-the-2nd-case-et00327635-02-05-2022-03-35-58.jpg" alt="hit"/></br>Hit the 2 <sup>nd</sup> case</ul>
+        <ul class="spc"><a href="#bkbk"><img id="sp6"  onclick="book()" src="https://lionsgate.brightspotcdn.com/59/e8/576c91ae47e4aa7fd6240dc48674/john-wick-chapter-1-movies-poster-01.jpg" alt="johnwick"/></br>John Wick</ul>
+        <ul class="spc"><a href="#bkbk"><img id="sp7" onclick="book()"  src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-Uqr7lw-3RpzKH1oz73j6lgHNpgp-9Z8YD_j2rRrpkKXlLl3n" alt="Quantamania"/></br>Quantamania</ul>
+        <ul class="spc"><a href="#bkbk"><img id="sp8" onclick="book()"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLIlb7yVqQOfj8zZlNAIPoJmmYB9ynkJxIIY6YU_npkCFnyzhV" alt="Spiderman"/></br>Spiderman</ul>
+       
+
+    </section>
+       <div  class="book" id="bkbk">
+        <p> Double click on a movie poster to book ticket</p>
+
+        <div class="movie-container">
+          <label>SELECT FORMAT</label>
+          <select id="movie">
+            <option value="150">2D(Rs.150)</option>
+            <option value="220"> 3D (Rs.220)</option>
+            <option value="300"> IMAX 3D (Rs.300)</option>
+            </select></div>
+            
+            <div><label>SELECT LANGUAGE</label>
+          <select id="language">
+            <option value="Hindi">Hindi</option>
+            <option value="English">English</option>
+            <option value="Tamil">Tamil</option>
+            </select>
+              </div>
+    
+        <ul class="showcase">
+          <li>
+            <div class="seat"></div>
+            <small>N/A</small>
+          </li>
+          <li>
+            <div class="seat selected"></div>
+            <small>Selected</small>
+          </li>
+          <li>
+            <div class="seat occupied"></div>
+            <small>Occupied</small>
+          </li>
+        </ul>
+    
+        <div class="container">
+          <div class="screen"></div>
+    
+          <div class="eyes">
+          All eyes this way please!
+          </div>
+        
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+          </div>
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+          </div>
+          <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+          </div>
+    
+        </div>
+    
+        <p class="text">
+          You have selected <span id="count">0</span> seats for a price of Rs.<span id="total"></span>
+        </p>
+    
+          <button id="PAYNOW">
+            <submit> PAY NOW </submit>
+          </button>
+        
+    </div>
+    
+
+<footer>
+    Copyright &copy; Bookmyshow</br></br>
+    <span class="last-tags" id="about"> About Us </span>
+    <span class="last-tags" id="contact">  Contact Us </span>
+    <span class="last-tags" id="t&c"> Terms and Conditions </span></br></br>
+<span class="social-media">
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-instagram"></a>
+</span>
+    
+</footer>    
+    
+</body>
+</html>
+
+<script>
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+
+
+//     document.getElementById("sp").onclick =function(){myFunction()};
+//     document.getElementById("sp1").onclick =function(){myFunction()};
+//     document.getElementById("sp2").onclick =function(){myFunction()};
+//     document.getElementById("sp3").onclick =function(){myFunction()};
+//     document.getElementById("sp4").onclick =function(){myFunction()};
+//     document.getElementById("sp5").onclick =function(){myFunction()};
+//     document.getElementById("sp6").onclick =function(){myFunction()};
+//     document.getElementById("sp7").onclick =function(){myFunction()};
+//     document.getElementById("sp8").onclick =function(){myFunction()};
+//     document.getElementById("sp9").onclick =function(){myFunction()};
+// function myFunction()
+// {
+//     window.open("index2.html");}
+
+    ///////////////////////////////////////////////////////////////////////////////////////// //
+
+    const container = document.querySelector('.container');
+const seats = document.querySelectorAll('.row .seat:not(.occupied)');
+const count = document.getElementById('count');
+const total = document.getElementById('total');
+const movieSelect = document.getElementById('movie');
+
+populateUI();
+
+let ticketPrice = +movieSelect.value;
+
+// Save selected movie index and price
+function setMovieData(movieIndex, moviePrice) {
+  localStorage.setItem('selectedMovieIndex', movieIndex);
+  localStorage.setItem('selectedMoviePrice', moviePrice);
+}
+
+// Update total and count
+function updateSelectedCount() {
+  const selectedSeats = document.querySelectorAll('.row .seat.selected');
+
+  const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
+
+  localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
+
+  const selectedSeatsCount = selectedSeats.length;
+
+  count.innerText = selectedSeatsCount;
+  total.innerText = selectedSeatsCount * ticketPrice;
+  
+  setMovieData(movieSelect.selectedIndex, movieSelect.value);
+}
+
+// Get data from localstorage and populate UI
+function populateUI() {
+  const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
+
+  if (selectedSeats !== null && selectedSeats.length > 0) {
+    seats.forEach((seat, index) => {
+      if (selectedSeats.indexOf(index) > -1) {
+        seat.classList.add('selected');
+      }
+    });
+  }
+
+  const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+
+  if (selectedMovieIndex !== null) {
+    movieSelect.selectedIndex = selectedMovieIndex;
+  }
+}
+
+// Movie select event
+movieSelect.addEventListener('change', e => {
+  ticketPrice = +e.target.value;
+  setMovieData(e.target.selectedIndex, e.target.value);
+  updateSelectedCount();
+});
+
+// Seat click event
+container.addEventListener('click', e => {
+  if (
+    e.target.classList.contains('seat') &&
+    !e.target.classList.contains('occupied')
+  ) {
+    e.target.classList.toggle('selected');
+
+    updateSelectedCount();
+  }
+});
+
+// Initial count and total set
+updateSelectedCount();
+
+document.getElementById("PAYNOW").onclick=function(){payfunction()};
+function payfunction(){
+  const total = document.getElementById('total');
+    
+  if (total.innerText !=0)
+  {  alert("tickets booked, please close this tab");
+        location.reload();
+  }
+  else
+  {  alert("please select seats")
+  }
+}
+
+var a;
+function book() {
+  var x = document.getElementById("bkbk");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+    
+
+</script>
+<style>
+
+body{
+    width: 90%;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    background-color: rgb(243, 232, 218);
+}
+#logo{
+    width: 106px;
+    height: 50px;
+    padding-top: 4px;
+    
+}
+nav{    
+    width: 90%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    /* align-content: space-around; */
+    align-items: center;
+    justify-items: center;
+    background-color: rgb(88 89 91);
+    position: fixed;
+    margin-top: -1%;
+    color: white;
+    overflow: hidden;
+    /* padding-top: 0px;*/
+}
+.tab{
+    color: aliceblue;
+    text-decoration: none;}
+    .movies{
+        text-align: center;
+        font-size: 10ch;
+
+    }
+
+.tab:hover, .last-tags:hover{
+    color:rgb(236, 177, 179);
+    cursor: pointer;
+}
+.recommended-movies{
+    width: 100%;
+    font-size: x-large;
+    padding-top: 10px;
+    margin-bottom: 0%;
+    
+}
+.mySlides{
+    padding-top: 40px;
+}
+#sp, #sp1, #sp2, #sp3, #sp4,#sp5, #sp6, #sp7, #sp8{
+    margin-top: 10px;
+    width:150px;
+    height:217px;
+    border-radius: 8px;
+    transition: 1s;
+    }
+    #sp:hover, #sp1:hover, #sp2:hover, #sp3:hover, #sp4:hover,
+    #sp5:hover,#sp6:hover,#sp7:hover,#sp8:hover{
+        opacity: 10;
+        width:200px;
+        height:250px;
+        border-radius: 10px;
+        cursor:pointer;
+      }
+  
+.small-posters{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: space-around;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+    font-size: 20px;
+    /* position: relative; */
+    /* background-color: aqua; */
+    transition: 5s;
+    }
+    /* .small-posters:hover{
+        height:325px;
+        transition: 5s;
+        
+    } */
+    
+    footer{color: white;
+        padding-top: 20px;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        background-color: rgb(217, 212, 205);
+        height: 150px;
+        background-image: url("https://images.pexels.com/photos/7991486/pexels-photo-7991486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        background-size: 100% 180px;
+    }
+    .last-tags{
+  
+    padding:10px;
+    
+        }
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+            width: 20px;
+            padding:3px;
+
+          }
+          .fa-twitter {
+            background: #55ACEE;
+            color: white;
+            width: 20px;
+            padding:3px;
+          }
+          .fa-instagram {
+            background: #125688;
+            color: white;
+            width: 20px;
+            padding:3px;
+          }
+          
+
+        
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+.book.hidden{
+    display: none;
+}
+.book {
+    
+  background-color: #242333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.movie-container {
+  margin: 20px 0;
+}
+
+
+.eyes{
+  color: white;
+  text-align: center;
+  font-size: xx-small;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  appearance: none;
+}
+#language {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+ appearance: none;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+
+.seat {
+  background-color: #444451;
+  height: 12px;
+  width: 15px;
+  margin: 3px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  /* border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
+}
+
+
+.seat.selected {
+  background-color: #6feaf6;
+}
+
+.seat.occupied {
+  background-color: #fff;
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
+  display: flex;
+}
+
+.screen {
+  background-color: #fff;
+  height: 70px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+  margin: 5px 0;
+}
+
+p.text span {
+  color: #6feaf6;
+}
+</style>
+
